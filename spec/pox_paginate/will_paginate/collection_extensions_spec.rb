@@ -22,8 +22,9 @@ describe 'XmlSerializer Extensions' do
     xml.should match(/<oogas.*total_entries=\"5\".*>\s+<ooga/)
   end
   
-  xit "should foo" do
+  it "should have rails patched to allow deserialisation of tags with more than one attribute" do
+    # Patch at https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails
     page = Ooga.paginate :page => 2, :per_page => 2
-    Hash.from_xml(page.to_xml)
+    lambda{Hash.from_xml(page.to_xml)}.should_not raise_error
   end
 end
