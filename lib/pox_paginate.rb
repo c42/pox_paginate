@@ -11,3 +11,4 @@ end
 
 require "#{PoxPaginate::Root}/pox_paginate/active_record"
 require "#{PoxPaginate::Root}/pox_paginate/will_paginate"
+require "#{PoxPaginate::Root}/pox_paginate/xml_mini"
