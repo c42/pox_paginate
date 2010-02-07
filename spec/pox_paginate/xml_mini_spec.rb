@@ -1,26 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe PoxPaginate::XmlMini do
-  def xml(date)
-    <<-EOXML
-<?xml version="1.0" encoding="UTF-8"?>
-<oogas type="array" total_entries="10" per_page="2" current_page="2">
-  <ooga>
-    <created-at type="datetime">#{date}</created-at>
-    <id type="integer">3</id>
-    <name>Foo</name>
-    <updated-at type="datetime">#{date}</updated-at>
-  </ooga>
-  <ooga>
-    <created-at type="datetime">#{date}</created-at>
-    <id type="integer">4</id>
-    <name>Baz</name>
-    <updated-at type="datetime">#{date}</updated-at>
-  </ooga>
-</oogas>
-EOXML
-  end
-  
   before :all do
     @date = DateTime.parse('2010-02-06T21:09:48+05:30')
   end
@@ -41,7 +21,7 @@ EOXML
       end
     
       it "should parse xml with header attributes into a hash" do
-        Hash.from_xml(xml(@date)).should == {"oogas"=>[
+        Hash.from_xml(paginated_xml(@date)).should == {"oogas"=>[
               {"name"=>"Foo", "updated_at"=>@date, "id"=>3, "created_at"=>@date}, 
               {"name"=>"Baz", "updated_at"=>@date, "id"=>4, "created_at"=>@date}
             ]}
@@ -59,7 +39,7 @@ EOXML
     end
     
     it "should know how to extract root node attributes" do
-      ActiveSupport::XmlMini.root_node_attributes(xml(@date)).should == {
+      ActiveSupport::XmlMini.root_node_attributes(paginated_xml(@date)).should == {
         'type' => "array",
         'total_entries' => "10",
         'per_page' => "2",
