@@ -26,25 +26,22 @@ describe PoxPaginate::XmlMini do
               {"name"=>"Baz", "updated_at"=>@date, "id"=>4, "created_at"=>@date}
             ]}
       end
-    end
-  end
 
-  describe "LibXML" do
-    before :all do
-      ActiveSupport::XmlMini.backend = 'LibXML'
-    end
-    
-    it "should be using the LibXML backend" do
-      ActiveSupport::XmlMini.backend.name.should == 'ActiveSupport::XmlMini_LibXML'
-    end
-    
-    it "should know how to extract root node attributes" do
-      ActiveSupport::XmlMini.root_node_attributes(paginated_xml(@date)).should == {
-        'type' => "array",
-        'total_entries' => "10",
-        'per_page' => "2",
-        'current_page' => "2"
-      }
+      it "should know how to extract root node attributes" do
+        ActiveSupport::XmlMini.root_node_attributes(paginated_xml(@date)).should == {
+          'type' => "array",
+          'total_entries' => "10",
+          'per_page' => "2",
+          'current_page' => "2"
+        }
+      end
+      
+      it "should not add root node attributes if there are none" do
+        ActiveSupport::XmlMini.root_node_attributes(unpaginated_xml(@date)).should == {
+          'type' => "array",
+        }
+      end
+      
     end
   end
 end

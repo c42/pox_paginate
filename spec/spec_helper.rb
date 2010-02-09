@@ -32,3 +32,23 @@ def paginated_xml(date)
 </oogas>
 EOXML
 end
+
+def unpaginated_xml(date)
+<<-EOXML
+<?xml version="1.0" encoding="UTF-8"?>
+<oogas type="array">
+  <ooga>
+    <created-at type="datetime">#{date}</created-at>
+    <id type="integer">3</id>
+    <name>Foo</name>
+    <updated-at type="datetime">#{date}</updated-at>
+  </ooga>
+  <ooga>
+    <created-at type="datetime">#{date}</created-at>
+    <id type="integer">4</id>
+    <name>Baz</name>
+    <updated-at type="datetime">#{date}</updated-at>
+  </ooga>
+</oogas>
+EOXML
+end
