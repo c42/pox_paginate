@@ -1,4 +1,4 @@
-= PoxPaginate
+= PoxPaginate 0.1.0
 
 PoxPaginate is an extension to WillPaginate and ActiveResource that makes it possible to transparently paginate over a collection of XML serialised resources.
 
