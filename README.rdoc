@@ -6,6 +6,9 @@ PoxPaginate is an extension to WillPaginate and ActiveResource that makes it pos
 
 PoxPaginate is available as a gem.
   gem install pox_paginate
+  
+and in your Rails environment.rb
+  config.gem "pox_paginate", :version => '>= 0.1.0', :lib => "pox_paginate"
 
 === Note
 It currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails].
