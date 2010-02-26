@@ -12,7 +12,7 @@ and in your Rails environment.rb
 
 == Usage
 
-When constructing the serialised form a resource, add pagination - like so:
+When constructing the xml serialised form of a resource in a controller, add pagination - like so:
   class ProductsController < ApplicationController
   
     # GET /products
