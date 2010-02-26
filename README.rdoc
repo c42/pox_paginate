@@ -8,7 +8,39 @@ PoxPaginate is available as a gem.
   gem install pox_paginate
   
 and in your Rails environment.rb
-  config.gem "pox_paginate", :version => '>= 0.1.0', :lib => "pox_paginate"
+  config.gem "pox_paginate", :version => '>= 0.1.0', :lib => "pox_paginate"la
+
+== Usage
+
+When constructing the serialised form a resource, add pagination - like so:
+  class ProductsController < ApplicationController
+  
+    # GET /products
+    # GET /products.xml
+    def index
+      @products = Product.paginate :page => params[:page], :per_page => params[:per_page]
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @products }
+      end
+    end
+    ...
+    ...
+    ...
+  end
+
+PoxPaginate extends WillPaginate::Collection to add 'current_page,' 'per_page' and 'total_entries' as attributes on the root node of the collection xml.
+
+On the client, you do the usual:
+  class Product < ActiveResource::Base
+    self.site = 'http://oogabooga.in'
+  end
+  
+Now whenever you do
+  Product.find(:all, :params => {:page => 2, :per_page => 5})
+
+PoxPaginate will kick in if pagination related attributes are present on the root node, and will result in the creation of a PoxPaginate::RemoteCollection, which is a subclass of WillPaginate::Collection and so behaves in exactly the same manner.
 
 === Note
-It currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails].
+* PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails]
+* PoxPaginate must needs be installed on both the client and the server Rails instance
