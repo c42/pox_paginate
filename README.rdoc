@@ -2,6 +2,8 @@
 
 PoxPaginate is an extension to WillPaginate and ActiveResource that makes it possible to transparently paginate over a collection of XML serialised resources.
 
+This gem is based on our experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML). Yes, it is in production. No, unfortunately we aren't allowed to talk about it.
+
 == Installation
 
 PoxPaginate is available as a gem.
