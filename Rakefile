@@ -8,7 +8,6 @@ namespace :spec do
   desc "Run all unit specs"
   Spec::Rake::SpecTask.new(:unit) do |task|
     task.spec_files = FileList['spec/pox_paginate/**/*_spec.rb']
-    # task.spec_opts = ['--options', 'spec/spec.opts']
   end
 end
 
@@ -17,7 +16,7 @@ begin
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "pox_paginate"
     gemspec.summary = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
-    gemspec.description = "Wrest is a HTTP and REST client library which allows you to quickly build well encapsulated, object oriented wrappers around any web service."
+    gemspec.description = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
     gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
     gemspec.email = "opensource@c42.in"
     gemspec.homepage = "http://github.com/kaiwren/wrest"
@@ -25,8 +24,8 @@ begin
     gemspec.require_path = "lib"
     gemspec.files.exclude *['.gitignore']
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('activesupport', '>= 2.3.5')
-    gemspec.add_dependency('activeresource', '>= 2.3.5')
+    gemspec.add_dependency('activesupport', '>~ 2.3.5')
+    gemspec.add_dependency('activeresource', '>~ 2.3.5')
     gemspec.add_dependency('will_paginate', '>= 2.3.12')
   end
 
