@@ -2,4 +2,59 @@
 
 PoxPaginate is an extension to WillPaginate and ActiveResource that makes it possible to transparently paginate over a collection of XML serialised resources.
 
-It currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails].
+This gem is based on our experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML). Yes, it is in production. No, unfortunately we aren't allowed to talk about it.
+
+== Installation
+
+PoxPaginate is available as a gem.
+  gem install pox_paginate
+  
+and in your Rails environment.rb
+  config.gem "pox_paginate", :version => '>= 0.1.0', :lib => "pox_paginate"
+  
+We also strongly recommend you use Ruby LibXML or Nokogiri rather than the standard REXML for deserialisation. While PoxPaginate supports all three, REXML is simply too slow for use in production. To switch to using either gem:
+  (sudo) gem install libxml-ruby
+or
+  (sudo) gem install nokogiri
+
+After this, you need to instruct Rails to use them. In environment.rb, do
+  ActiveSupport::XmlMini.backend = 'LibXML'
+or
+  ActiveSupport::XmlMini.backend = 'Nokogiri'
+  
+Before you ask, yes we're working on adding support for jdom so PoxPaginate can be used on JRuby :)
+
+== Usage
+
+When constructing the xml serialised form of a resource in a controller, add pagination - like so:
+  class ProductsController < ApplicationController
+  
+    # GET /products
+    # GET /products.xml
+    def index
+      @products = Product.paginate :page => params[:page], :per_page => params[:per_page]
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @products }
+      end
+    end
+    ...
+    ...
+    ...
+  end
+
+PoxPaginate extends WillPaginate::Collection to add 'current_page,' 'per_page' and 'total_entries' as attributes on the root node of the collection xml.
+
+On the client, you do the usual:
+  class Product < ActiveResource::Base
+    self.site = 'http://oogabooga.in'
+  end
+  
+Now whenever you do
+  Product.find(:all, :params => {:page => 2, :per_page => 5})
+
+PoxPaginate will kick in if pagination related attributes are present on the root node, and will result in the creation of a PoxPaginate::RemoteCollection, which is a subclass of WillPaginate::Collection and so behaves in exactly the same manner.
+
+=== Note
+* PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails]
+* PoxPaginate must needs be installed on both the client and the server Rails instance

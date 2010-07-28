@@ -1,3 +1,7 @@
+require 'rubygems'
+gem 'activesupport', '~> 2.3.5'
+gem 'rspec', '~> 1.3.0'
+
 require 'spec'
 require 'spec/rake/spectask'
 
@@ -24,9 +28,9 @@ begin
     gemspec.require_path = "lib"
     gemspec.files.exclude *['.gitignore']
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('activesupport', '>~ 2.3.5')
-    gemspec.add_dependency('activeresource', '>~ 2.3.5')
-    gemspec.add_dependency('will_paginate', '>= 2.3.12')
+    gemspec.add_dependency('active_support', '~> 2.3.5')
+    gemspec.add_dependency('active_resource', '~> 2.3.5')
+    gemspec.add_dependency('will_paginate', '~> 2.3.12')
   end
 
   Jeweler::GemcutterTasks.new
