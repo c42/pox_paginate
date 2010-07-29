@@ -20,7 +20,7 @@ begin
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "pox_paginate"
     gemspec.summary = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
-    gemspec.description = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
+    gemspec.description = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource. This gem is based on our experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML)."
     gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
     gemspec.email = "opensource@c42.in"
     gemspec.homepage = "http://github.com/kaiwren/wrest"
