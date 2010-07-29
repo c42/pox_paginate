@@ -32,7 +32,7 @@ begin
     gemspec.add_dependency('activesupport', '~> 2.3.5')
     gemspec.add_dependency('activeresource', '~> 2.3.5')
     gemspec.add_dependency('will_paginate', '~> 2.3.12')
-    gemspec.add_development_dependency('rspc', '~> 1.3.0')
+    gemspec.add_development_dependency('rspec', '~> 1.3.0')
     gemspec.add_development_dependency('activerecord', '~> 2.3.5')
   end
 
