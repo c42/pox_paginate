@@ -19,8 +19,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "pox_paginate"
-    gemspec.summary = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
-    gemspec.description = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource. This gem is based on our experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML)."
+    gemspec.summary = "Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource"
+    gemspec.description = "Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource. This gem is based on C42 Engineering's experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML)."
     gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
     gemspec.email = "opensource@c42.in"
     gemspec.homepage = "http://c42.in/open_source"
