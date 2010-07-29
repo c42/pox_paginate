@@ -23,14 +23,17 @@ begin
     gemspec.description = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource. This gem is based on our experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML)."
     gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
     gemspec.email = "opensource@c42.in"
-    gemspec.homepage = "http://github.com/kaiwren/wrest"
+    gemspec.homepage = "http://c42.in/open_source"
     gemspec.has_rdoc = false
     gemspec.require_path = "lib"
     gemspec.files.exclude *['.gitignore']
+
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('active_support', '~> 2.3.5')
-    gemspec.add_dependency('active_resource', '~> 2.3.5')
+    gemspec.add_dependency('activesupport', '~> 2.3.5')
+    gemspec.add_dependency('activeresource', '~> 2.3.5')
     gemspec.add_dependency('will_paginate', '~> 2.3.12')
+    gemspec.add_development_dependency('rspc', '~> 1.3.0')
+    gemspec.add_development_dependency('activerecord', '~> 2.3.5')
   end
 
   Jeweler::GemcutterTasks.new
