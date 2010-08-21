@@ -10,6 +10,7 @@
 require 'rubygems'
 gem 'activeresource', '~> 2.3.5'
 gem 'activesupport', '~> 2.3.5'
+gem 'will_paginate', '~> 2.3.12'
 require 'active_resource'
 require 'active_support'
 require 'will_paginate'
