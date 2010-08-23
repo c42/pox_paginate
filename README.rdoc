@@ -58,3 +58,22 @@ PoxPaginate will kick in if pagination related attributes are present on the roo
 === Note
 * PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails]
 * PoxPaginate must needs be installed on both the client and the server Rails instance
+
+== Continuous Itegration
+
+You can find the link to the pox_paginate CI build over at the C42 Engineering {open source}[http://c42.in/open_source] page.
+
+== How to contribute
+
+* Create an {issue} [http://github.com/c42/pox_paginate/issues] describing what you're adding (or fixing)
+* Fork pox_paginate
+* Make your changes, including specs, with the issue number in the commit message
+* Run the build (running rake should do it) to make sure everything is all right
+* Send us a pull request
+
+If your patch is accepted, we will add you to the 'Contributors' section of the README.
+
+== Contributors
+
+* {Sidu Ponnappa} [http://github.com/kaiwren]
+* {Niranjan Paranjape} [http://github.com/niranjan]
