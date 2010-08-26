@@ -1,18 +1,17 @@
 require 'rubygems'
-gem 'rspec', '~> 1.3.0'
-gem 'activerecord', '~> 2.3.5'
-gem 'activeresource', '~> 2.3.5'
-
 require 'pp'
-require 'spec'
-require 'active_record'
+require 'rspec'
 
 require File.expand_path(File.dirname(__FILE__) + "/../lib/pox_paginate")
+
+require 'active_record'
+require 'will_paginate/finders/active_record'
 
 ActiveRecord::Base.establish_connection(YAML::load(File.open(File.dirname(__FILE__) + '/config/database.yml')))
 ActiveRecord::Base.logger = Logger.new(File.open(File.dirname(__FILE__) + '/../log/test.log', 'a'))
 ActiveRecord::Migrator.up(File.dirname(__FILE__) + '/db/migrate')
-WillPaginate.enable_activerecord
+
+WillPaginate::Finders::ActiveRecord.enable!
 
 class Ooga < ActiveRecord::Base
 end

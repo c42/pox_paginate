@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe PoxPaginate::ActiveSupport::CoreHashExt do
+describe Hash do
   
   it 'should from_xml ignores any root attributes other than type' do
     Hash.from_xml(paginated_xml(@date)).should == {"oogas"=>[

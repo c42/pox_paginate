@@ -7,13 +7,15 @@
 # is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
 # See the License for the specific language governing permissions and limitations under the License. 
 
-require 'rubygems'
-gem 'activeresource', '~> 2.3.5'
-gem 'activesupport', '~> 2.3.5'
-gem 'will_paginate', '~> 2.3.12'
+require "rubygems"
+require "bundler"
+Bundler.setup
+
 require 'active_resource'
 require 'active_support'
-require 'will_paginate'
+require 'active_support/core_ext'
+require 'will_paginate/collection'
+require 'will_paginate/finders/active_resource'
 
 module PoxPaginate
   Root = File.dirname(__FILE__)
