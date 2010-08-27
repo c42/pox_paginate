@@ -5,8 +5,8 @@ describe PoxPaginate::XmlMini do
     @date = DateTime.parse('2010-02-06T21:09:48+05:30')
   end
   
-  %w(REXML LibXML Nokogiri).each do |deserialiser|
-    describe "using #{deserialiser}" do
+  xml_backends.each do |deserialiser|
+    context "using #{deserialiser}" do
       before :all do
         ActiveSupport::XmlMini.backend = deserialiser
       end
@@ -38,10 +38,10 @@ describe PoxPaginate::XmlMini do
       
       it "should not add root node attributes if there are none" do
         ActiveSupport::XmlMini.root_node_attributes(unpaginated_xml(@date)).should == {
-          'type' => "array",
+          'type' => "array"
         }
+        ActiveSupport::XmlMini.root_node_attributes({:test => "Ooga"}.to_xml).should == {}
       end
-      
     end
   end
 end

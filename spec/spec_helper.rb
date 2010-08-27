@@ -55,3 +55,7 @@ def unpaginated_xml(date)
 </oogas>
 EOXML
 end
+
+def xml_backends
+  RUBY_PLATFORM =~ /java/ ? %w(REXML JDOM) : %w(REXML LibXML Nokogiri)
+end
