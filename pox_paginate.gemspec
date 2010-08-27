@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{pox_paginate}
-  s.version = "0.2.0.beta0"
+  s.version = "0.2.0.beta1"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
-  s.date = %q{2010-08-27}
+  s.date = %q{2010-08-28}
   s.description = %q{Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource. This gem is based on C42 Engineering's experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML).}
   s.email = %q{opensource@c42.in}
   s.extra_rdoc_files = [
