@@ -2,7 +2,7 @@ require 'rubygems'
 require 'pp'
 require 'rspec'
 
-require File.expand_path(File.dirname(__FILE__) + "/../lib/pox_paginate")
+require "pox_paginate"
 
 require 'active_record'
 require 'will_paginate/finders/active_record'

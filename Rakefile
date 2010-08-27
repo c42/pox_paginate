@@ -2,11 +2,13 @@ puts "Building on Ruby #{RUBY_VERSION}, #{RUBY_RELEASE_DATE}, #{RUBY_PLATFORM}"
 
 require 'rubygems'
 gem 'activesupport', '~> 3.0.0.rc2'
-gem 'rspec', '= 2.0.0.beta.19'
+gem 'rspec', '~> 2.0.0.beta.20'
 
 require 'rake'
 require 'rspec'
 require 'rspec/core/rake_task'
+
+$:.unshift File.expand_path("../lib", __FILE__)
 
 desc 'Default: run spec tests.'
 task :default => 'rspec:unit'
@@ -37,6 +39,10 @@ begin
     gemspec.add_dependency('will_paginate', '~> 3.0.pre2')
     gemspec.add_development_dependency('rspec', '~> 2.0.0.beta.20')
     gemspec.add_development_dependency('activerecord', '~> 3.0.0.rc2')
+    gemspec.add_development_dependency('sqlite3-ruby', '~> 1.3.1')
+    gemspec.add_development_dependency('nokogiri', '~> 1.4.3.1')
+    gemspec.add_development_dependency('libxml-ruby', '~> 1.1.4')
+    
   end
 
   Jeweler::GemcutterTasks.new

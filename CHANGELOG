@@ -1,4 +1,7 @@
-== Coming Soon
+== Coming soon
+  * jRuby support with jdom
+
+== 0.2.0.beta1
   * Support for Rails 3.0.0.rc
 
 == 0.1.1
