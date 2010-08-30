@@ -1,4 +1,5 @@
-== Coming soon
+== 0.2.0
+  * Rails 3.0.0 compatibility
   * jRuby support with jdom
 
 == 0.2.0.beta1

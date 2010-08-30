@@ -1,7 +1,7 @@
 puts "Building on Ruby #{RUBY_VERSION}, #{RUBY_RELEASE_DATE}, #{RUBY_PLATFORM}"
 
 require 'rubygems'
-gem 'activesupport', '~> 3.0.0.rc2'
+gem 'activesupport', '~> 3.0.0'
 gem 'rspec', '~> 2.0.0.beta.20'
 
 require 'rake'
@@ -34,11 +34,11 @@ begin
     gemspec.files.exclude *['.gitignore']
 
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('activesupport', '~> 3.0.0.rc2')
-    gemspec.add_dependency('activeresource', '~> 3.0.0.rc2')
+    gemspec.add_dependency('activesupport', '~> 3.0.0')
+    gemspec.add_dependency('activeresource', '~> 3.0.0')
     gemspec.add_dependency('will_paginate', '~> 3.0.pre2')
     gemspec.add_development_dependency('rspec', '~> 2.0.0.beta.20')
-    gemspec.add_development_dependency('activerecord', '~> 3.0.0.rc2')
+    gemspec.add_development_dependency('activerecord', '~> 3.0.0')
     gemspec.add_development_dependency('sqlite3-ruby', '~> 1.3.1')
     gemspec.add_development_dependency('nokogiri', '~> 1.4.3.1')
     gemspec.add_development_dependency('libxml-ruby', '~> 1.1.4')

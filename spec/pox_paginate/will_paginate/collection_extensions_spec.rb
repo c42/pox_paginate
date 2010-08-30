@@ -9,10 +9,6 @@ describe 'XmlSerializer Extensions' do
     Ooga.create!(:name => 'Woot')
   end
   
-  it "should ooga" do
-    Ooga.count.should == 5
-  end
-  
   it "should serialize to xml with root node attributes containing pagination metadata" do
     page = Ooga.paginate :page => 2, :per_page => 2
     xml = page.to_xml
