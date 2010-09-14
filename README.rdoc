@@ -1,4 +1,4 @@
-= PoxPaginate 0.2.0.beta1
+= PoxPaginate 0.2.0
 
 PoxPaginate is an extension to WillPaginate and ActiveResource that makes it possible to transparently paginate over a collection of XML serialised resources.
 
@@ -7,19 +7,22 @@ This gem is based on our experience building largish distributed systems consist
 == Installation
 
 PoxPaginate is available as a gem. In your Gemfile add
-  gem 'pox_paginate', '~> 0.2.0.beta1'
+  gem 'pox_paginate', '~> 0.2.0'
 
 We also strongly recommend you use Ruby LibXML or Nokogiri rather than the standard REXML for deserialisation. While PoxPaginate supports all three, REXML is simply too slow for use in production. To switch to using either gem:
   gem 'nokogiri', '~> 1.4.3.1'
 or
   gem 'libxml-ruby', '~> 1.1.4'
 
+* These gems are not added in the Gemfile
+
 After this, you need to instruct Rails to use them. In application.rb, do
   ActiveSupport::XmlMini.backend = 'LibXML'
 or
   ActiveSupport::XmlMini.backend = 'Nokogiri'
   
-Before you ask, yes we're working on adding support for jdom so PoxPaginate can be used on JRuby :)
+JDOM is supported as a backend on JRuby
+  ActiveSupport::XmlMini.backend = 'JDOM'
 
 == Usage
 
