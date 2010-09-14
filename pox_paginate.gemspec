@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{pox_paginate}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
      "lib/pox_paginate/active_support.rb",
      "lib/pox_paginate/active_support/core_hash_ext.rb",
      "lib/pox_paginate/remote_collection.rb",
+     "lib/pox_paginate/version.rb",
      "lib/pox_paginate/will_paginate.rb",
      "lib/pox_paginate/will_paginate/collection_extensions.rb",
      "lib/pox_paginate/xml_mini.rb",
