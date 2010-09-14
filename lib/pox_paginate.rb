@@ -21,6 +21,7 @@ module PoxPaginate
   Root = File.dirname(__FILE__)
 end
 
+require "#{PoxPaginate::Root}/pox_paginate/version"
 require "#{PoxPaginate::Root}/pox_paginate/active_support"
 require "#{PoxPaginate::Root}/pox_paginate/remote_collection"
 require "#{PoxPaginate::Root}/pox_paginate/active_resource"
