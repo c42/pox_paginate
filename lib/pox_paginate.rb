@@ -8,8 +8,8 @@
 # See the License for the specific language governing permissions and limitations under the License. 
 
 require 'rubygems'
-gem 'activeresource', '~> 2.3.5'
-gem 'activesupport', '~> 2.3.5'
+gem 'activeresource', '~> 2.3.4'
+gem 'activesupport', '~> 2.3.4'
 gem 'will_paginate', '~> 2.3.12'
 require 'active_resource'
 require 'active_support'

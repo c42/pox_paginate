@@ -1,5 +1,5 @@
 require 'rubygems'
-gem 'activesupport', '~> 2.3.5'
+gem 'activesupport', '~> 2.3.4'
 gem 'rspec', '~> 1.3.0'
 
 require 'spec'
@@ -29,11 +29,11 @@ begin
     gemspec.files.exclude *['.gitignore']
 
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('activesupport', '~> 2.3.5')
-    gemspec.add_dependency('activeresource', '~> 2.3.5')
+    gemspec.add_dependency('activesupport', '~> 2.3.4')
+    gemspec.add_dependency('activeresource', '~> 2.3.4')
     gemspec.add_dependency('will_paginate', '~> 2.3.12')
     gemspec.add_development_dependency('rspec', '~> 1.3.0')
-    gemspec.add_development_dependency('activerecord', '~> 2.3.5')
+    gemspec.add_development_dependency('activerecord', '~> 2.3.4')
   end
 
   Jeweler::GemcutterTasks.new
