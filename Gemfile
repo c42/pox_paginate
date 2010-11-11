@@ -1,4 +1,4 @@
-source "http://localhost:8808"
+source "http://rubygems.org"
 
 gem 'activeresource', '~> 3.0.1'
 gem 'activesupport', '~> 3.0.1'
