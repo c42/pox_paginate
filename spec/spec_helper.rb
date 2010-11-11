@@ -1,8 +1,8 @@
 require 'rubygems'
-require 'pp'
+require "pox_paginate"
+
 require 'rspec'
 
-require "pox_paginate"
 
 require 'active_record'
 require 'will_paginate/finders/active_record'

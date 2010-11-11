@@ -1,12 +1,12 @@
-source "http://rubygems.org"
+source "http://localhost:8808"
 
-gem 'activeresource', '~> 3.0.0'
-gem 'activesupport', '~> 3.0.0'
+gem 'activeresource', '~> 3.0.1'
+gem 'activesupport', '~> 3.0.1'
 gem 'will_paginate', '~> 3.0.pre2'
 
 group :test do
-  gem 'activerecord',  '~> 3.0.0'
-  gem 'rspec', '~> 2.0.0.beta.20'
+  gem 'activerecord',  '~> 3.0.1'
+  gem 'rspec', '~> 2.0.0'
   platforms :jruby do
     gem 'jdbc-sqlite3', '~> 3.6.3.054'
     gem 'activerecord-jdbcsqlite3-adapter', '~> 0.9.7'

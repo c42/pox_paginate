@@ -1,8 +1,6 @@
 puts "Building on Ruby #{RUBY_VERSION}, #{RUBY_RELEASE_DATE}, #{RUBY_PLATFORM}"
 
 require "rubygems"
-require "bundler"
-Bundler.setup
 
 require 'rake'
 require 'rspec'
