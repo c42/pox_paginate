@@ -1,8 +1,6 @@
 puts "Building on Ruby #{RUBY_VERSION}, #{RUBY_RELEASE_DATE}, #{RUBY_PLATFORM}"
 
-require 'rubygems'
-gem 'activesupport', '~> 3.0.0'
-gem 'rspec', '~> 2.0.0.beta.20'
+require "rubygems"
 
 require 'rake'
 require 'rspec'
@@ -12,6 +10,9 @@ $:.unshift File.expand_path("../lib", __FILE__)
 
 desc 'Default: run spec tests.'
 task :default => 'rspec:unit'
+
+desc 'Cruise task'
+task :cruise => 'rspec:unit'
 
 namespace :rspec do
   desc "Run all unit specs"
