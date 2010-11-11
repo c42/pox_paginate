@@ -1,8 +1,9 @@
 source "http://rubygems.org"
 
-gem 'activeresource', '~> 3.0.0'
-gem 'activesupport', '~> 3.0.0'
-gem 'will_paginate', '~> 3.0.pre2'
+
+gem 'activeresource', '>= 3.0.0'
+gem 'activesupport', '>= 3.0.0'
+gem 'will_paginate', '>= 3.0.pre2'
 
 group :test do
   gem 'activerecord',  '~> 3.0.0'

@@ -2,3 +2,4 @@ log/*.log
 pkg
 .bundle
 Gemfile.lock
+*.rbc
