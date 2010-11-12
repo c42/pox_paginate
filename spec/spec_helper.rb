@@ -57,5 +57,8 @@ EOXML
 end
 
 def xml_backends
-  RUBY_PLATFORM =~ /java/ ? %w(REXML JDOM) : %w(REXML LibXML Nokogiri)
+  backends = ['Nokogiri','REXML']
+  backends << 'LibXML' unless (RUBY_PLATFORM =~ /java/ || (Object.const_defined?('RUBY_ENGINE') && RUBY_ENGINE =~ /rbx/))
+  backends << 'JDOM' if RUBY_PLATFORM =~ /java/
+  backends
 end
