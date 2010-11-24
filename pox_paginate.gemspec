@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
-  s.date = %q{2010-09-14}
+  s.date = %q{2010-11-24}
   s.description = %q{Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource. This gem is based on C42 Engineering's experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML).}
   s.email = %q{opensource@c42.in}
   s.extra_rdoc_files = [
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "cruise_config.rb",
      "lib/pox_paginate.rb",
      "lib/pox_paginate/active_resource.rb",
      "lib/pox_paginate/active_resource/xml_format.rb",
@@ -52,12 +51,12 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource}
   s.test_files = [
-    "spec/db/migrate/001_create_oogas.rb",
-     "spec/pox_paginate/active_resource/xml_format_spec.rb",
-     "spec/pox_paginate/active_support/core_hash_ext_spec.rb",
+    "spec/spec_helper.rb",
      "spec/pox_paginate/will_paginate/collection_extensions_spec.rb",
      "spec/pox_paginate/xml_mini_spec.rb",
-     "spec/spec_helper.rb"
+     "spec/pox_paginate/active_resource/xml_format_spec.rb",
+     "spec/pox_paginate/active_support/core_hash_ext_spec.rb",
+     "spec/db/migrate/001_create_oogas.rb"
   ]
 
   if s.respond_to? :specification_version then
