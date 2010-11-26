@@ -1,4 +1,4 @@
-== 0.2.1
+== 0.2.2
   * Support for RBX
   * Create empty RemoteCollection when xml response is blank (Patch submitted by klacointe)
   * Added jruby development dependancies to the gemspec

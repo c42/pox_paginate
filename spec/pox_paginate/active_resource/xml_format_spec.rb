@@ -8,6 +8,7 @@ describe PoxPaginate::ActiveResource::XmlFormat do
         collection = ActiveResource::Formats::XmlFormat.decode(paginated_xml(DateTime.parse('2010-02-06T21:09:48+05:30')))
         collection.should be_a(PoxPaginate::RemoteCollection)
       end
+
       it "should accept empty response" do
         ::ActiveSupport::XmlMini.backend = deserialiser
         collection = ActiveResource::Formats::XmlFormat.decode("")
