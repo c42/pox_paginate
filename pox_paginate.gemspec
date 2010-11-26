@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
-  s.date = %q{2010-11-24}
+  s.date = %q{2010-11-26}
   s.description = %q{Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource. This gem is based on C42 Engineering's experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML).}
   s.email = %q{opensource@c42.in}
   s.extra_rdoc_files = [
@@ -72,6 +72,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<sqlite3-ruby>, ["~> 1.3.1"])
       s.add_development_dependency(%q<nokogiri>, ["~> 1.4.3.1"])
       s.add_development_dependency(%q<libxml-ruby>, ["~> 1.1.4"])
+      s.add_development_dependency(%q<jdbc-sqlite3>, ['~> 3.6.3.054'])
+      s.add_development_dependency(%q<activerecord-jdbcsqlite3-adapter>, ['~> 0.9.7'])
     else
       s.add_dependency(%q<activesupport>, ["~> 3.0.0"])
       s.add_dependency(%q<activeresource>, ["~> 3.0.0"])
