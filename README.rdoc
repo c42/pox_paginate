@@ -78,5 +78,5 @@ If your patch is accepted, we will add you to the 'Contributors' section of the 
 * {Sidu Ponnappa}[http://github.com/kaiwren]
 * {Niranjan Paranjape}[http://github.com/niranjan]
 * {Jean-Denis Vauguet}[http://github.com/chikamichi]
-* {klacointe}[http://github.com/klacointe]
+* {klacointe }[http://github.com/klacointe]
  
