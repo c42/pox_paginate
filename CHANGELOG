@@ -1,3 +1,6 @@
+== 0.2.3
+  * Fixing file permission problems with packaged gem
+
 == 0.2.2
   * Support for RBX
   * Create empty RemoteCollection when xml response is blank (Patch submitted by klacointe)
