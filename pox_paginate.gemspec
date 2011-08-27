@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   # dependencies
   s.add_runtime_dependency "activesupport", ["~> 3.0.0"]
   s.add_runtime_dependency "activeresource", ["~> 3.0.0"]
-  s.add_runtime_dependency "will_paginate", ["~> 3.0.pre2"]
+  s.add_runtime_dependency "will_paginate", ["~> 3.0.0"]
   
   # development dependencies
   s.add_development_dependency "rspec", ["~> 2.6.0"]

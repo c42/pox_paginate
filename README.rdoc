@@ -1,4 +1,4 @@
-= PoxPaginate 0.2.2
+= PoxPaginate 0.2.4
 
 PoxPaginate is an extension to WillPaginate and ActiveResource that makes it possible to transparently paginate over a collection of XML serialised resources.
 
@@ -57,6 +57,7 @@ PoxPaginate will kick in if pagination related attributes are present on the roo
 
 === Note
 * PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails]
+* This patch is merged in Rail 3.1 branch
 * PoxPaginate must needs be installed on both the client and the server Rails instance
 
 == Continuous Itegration

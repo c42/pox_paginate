@@ -11,7 +11,7 @@ require 'active_resource'
 require 'active_support'
 require 'active_support/core_ext'
 require 'will_paginate/collection'
-require 'will_paginate/finders/active_resource'
+# require 'will_paginate/finders/active_resource'
 
 module PoxPaginate
   Root = File.dirname(__FILE__)
