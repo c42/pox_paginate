@@ -1,3 +1,6 @@
+== 0.2.4
+  * Moving to WillPaginate 3.0.0
+
 == 0.2.3
   * Fixing file permission problems with packaged gem
 
