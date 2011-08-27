@@ -56,8 +56,8 @@ Now whenever you do
 PoxPaginate will kick in if pagination related attributes are present on the root node, and will result in the creation of a PoxPaginate::RemoteCollection, which is a subclass of WillPaginate::Collection and so behaves in exactly the same manner.
 
 === Note
-* PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Lighthouse ticket}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/3217-parsing-an-xml-file-with-multiple-records-and-extra-attributes-besides-type-fails]
-* This patch is merged in Rail 3.1 branch
+* PoxPaginate currently overrides the Hash.from_xml method to fix a bug in Rails that is documented in this {Rails issue}[https://github.com/rails/rails/issues/636]
+* This patch is merged in Rail head (not in RC6)
 * PoxPaginate must needs be installed on both the client and the server Rails instance
 
 == Continuous Itegration
