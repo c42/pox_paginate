@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
  
   s.required_rubygems_version = ">= 1.3.0"
 
-  s.files             = Dir.glob("lib/**/*.rb") + %w(README.rdoc CHANGELOG LICENCE pox_paginate.gemspec)
+  s.files             = Dir.glob("lib/**/*.rb") + %w(README.rdoc CHANGELOG LICENCE)
   s.extra_rdoc_files  = ["README.rdoc"]
   s.rdoc_options      = ["--charset=UTF-8"]
   s.require_path      = 'lib'

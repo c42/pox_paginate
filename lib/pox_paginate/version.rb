@@ -1,5 +1,9 @@
 module PoxPaginate # :nodoc:
   module Version # :nodoc:
-    STRING = File.readlines(File.expand_path('../../../VERSION', __FILE__)).first
+    MAJOR = 0
+    MINOR = 2
+    TINY  = 5
+
+    STRING = [MAJOR, MINOR, TINY].compact.join('.')
   end
 end
