@@ -20,13 +20,13 @@ Gem::Specification.new do |s|
   s.test_files        = Dir.glob("spec/**/*.rb")
 
   # dependencies
-  s.add_runtime_dependency "activesupport", ["~> 3.1.0"]
-  s.add_runtime_dependency "activeresource", ["~> 3.1.0"]
+  s.add_runtime_dependency "activesupport", ["~> 3.2.0"]
+  s.add_runtime_dependency "activeresource", ["~> 3.2.0"]
   s.add_runtime_dependency "will_paginate", ["~> 3.0.0"]
   
   # development dependencies
   s.add_development_dependency "rspec", ["~> 2.7.0"]
-  s.add_development_dependency "activerecord", ["~> 3.1.0"]
+  s.add_development_dependency "activerecord", ["~> 3.2.0"]
   s.add_development_dependency "nokogiri", ["~> 1.4.5"]
 end
 
